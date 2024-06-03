@@ -1,0 +1,17 @@
+{
+  "name": "ags_taskbar",
+  "version": "1.0.0",
+  "description": "if suggestions don't work, first make sure you have TypeScript LSP working in your editor",
+  "main": "config.js",
+  "scripts": {
+    "dev": "nodemon -e js,ts,scss --exec 'sass --no-source-map main.scss out.css && ags'",
+    "inspect": "nodemon -e js,ts,scss --exec 'sass --no-source-map main.scss out.css && ags -i'"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bun": "^1.1.7",
+    "sass": "^1.77.0"
+  }
+}

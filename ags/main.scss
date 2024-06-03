@@ -1,0 +1,208 @@
+$primary-bg: rgb(8, 10, 26, 0.8);
+
+$secondary-bg: rgb(207, 218, 231, 0.05);
+$secondary-bg-light: rgb(207, 218, 231, 0.1);
+$secondary-bg-dark: rgb(207, 218, 231, 0.03);
+
+$tertiary-bg: rgb(111, 116, 170, 0.1);
+$tertiary-bg-light: rgb(111, 116, 170, 0.15);
+$tertiary-bg-dark: rgb(111, 116, 170, 0.05);
+
+$primary-fg: #F4F7F8;
+$secondary-fg: #D9D9D9;
+
+$accent: #2B49E5;
+$accent-light: #3C59F2;
+$accent-dark: #223BBB;
+
+$radius-1: 12px;
+$radius-2: 8px;
+$radius-3: 4px;
+
+$bg1 : rgba(19, 20, 30, 0.75);
+$bg2 : rgba(19, 20, 30, 0.5);
+
+// Convert all fgDark to rgba
+$fgDark1: rgba(38, 39, 56, 0.5);
+$fgDark2: rgba(57, 58, 82, 0.5);
+$fgDark3: rgba(75, 77, 107, 0.5);
+$yellow : #b89933;
+$cyan : #20a3c7;
+$darkblue : #081633;
+$green : #45deaf;
+$orange : #FF8800;
+$violet : #a9a1e1;
+$magenta : #c678dd;
+$blue : #2b96fb;
+$red : #ec5f67;
+
+
+* {
+	all: unset;
+	font-family: "sans-serif";
+	color: $primary-fg;
+}
+
+@mixin section {
+	border-radius: 8px;
+	padding: 12px;
+}
+
+.bar {
+	background: rgb(68, 71, 82, 0.1);
+}
+
+@mixin widget {
+	padding: 12px;
+	border-radius: $radius-1;
+	background: $primary-bg;
+}
+
+@mixin widget-section {
+	border-radius: $radius-2;
+	background: $secondary-bg;
+	padding: 12px;
+}
+
+@mixin widget-section-hover {
+	&:hover {
+		background: $secondary-bg-light;
+	}
+}
+
+@mixin widget-section-active {
+
+	&:active {
+		background: $secondary-bg-dark;
+	}
+}
+
+.bar-button {
+	padding: 0 8px 0 8px;
+	border-radius: $radius-2;
+	font-size: 10px;
+
+	@include widget-section-hover;
+	@include widget-section-active;
+}
+
+.workspace_indicator {
+	@include section;
+
+	& .workspace {
+		background: $secondary-bg;
+		border-radius: $radius-1;
+		min-width: 8px;
+		min-height: 8px;
+		transition: min-height 100ms cubic-bezier(1, 0, 0, 1);
+
+		&.active {
+			background: $primary-fg;
+			min-height: 8px;
+		}
+	}
+}
+
+.slider {
+	& trough {
+		background-color: $tertiary-bg;
+		border-radius: $radius-3;
+	}
+
+	& highlight {
+		min-height: 16px;
+		background-color: $accent;
+		border-radius: $radius-3;
+	}
+}
+
+
+/* NOTE: ---------------------------------------------> Right Section */
+
+calendar {
+	all: unset;
+
+	button {
+		background: $red;
+	}
+
+	&.button {
+		background: none;
+
+		&:hover {
+			background: $fgDark2;
+		}
+	}
+
+	&:selected {
+		color: $blue;
+		background: none;
+	}
+
+	&.header {
+		background-color: transparent;
+		border: none;
+		color: $primary-fg;
+	}
+
+	&.highlight {
+		background-color: transparent;
+		color: transparentize($primary-fg, 0.5);
+	}
+
+	&:indeterminate {
+		color: transparentize($primary-fg, 0.9);
+	}
+
+	background: $primary-bg;
+	font-size: 1.1rem;
+}
+
+.control-panel {
+	padding: 12px;
+	border-radius: $radius-1;
+	min-width: 300px;
+}
+
+
+
+.face {
+	border-radius: 50%;
+}
+
+.user_box {
+	padding: 8px;
+}
+
+.music_player {
+	padding: 8px;
+
+}
+
+.progress {
+	border-radius: $radius-2;
+	padding-bottom: 4px;
+
+	& trough {
+		border-radius: 8px;
+		background: $fgDark3;
+
+		& progress {
+			background: $primary-fg;
+			border-radius: 8px;
+		}
+	}
+}
+
+.connection_box {
+	& .connection_button {
+		padding: 0 8px 0 8px;
+		border-radius: $radius-2;
+		font-size: 18px;
+
+	}
+}
+
+@import "src/Panels/style.scss";
+@import "src/Panels/Components/style.scss";
+@import "src/Sections/style.scss";
