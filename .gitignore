@@ -1,5 +1,5 @@
-ags/types/
-assets/
+ags/types
+assets
 chromium/
 Code/
 dconf/
