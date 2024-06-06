@@ -4,14 +4,15 @@ format = """$os\
 $username\
 $hostname\
 $directory\
+$git_branch\
 $package\
 $cmd_duration\
 $character\
 """
-
+# #687387
 [character]
 error_symbol = "[►](bold red)"
-success_symbol = "[►](bold #687387)"
+success_symbol = "[►](bold #9aa0ab)"
 
 [os]
 disabled = false
@@ -29,16 +30,16 @@ symbol = '.'
 disabled = false
 format = '[$user ]($style)'
 show_always = true
-style_user = 'fg:#687387'
+style_user = 'fg:#9aa0ab'
 
 [directory]
 format = "[at ]($style)[$path]($style)[$read_only]($read_only_style) "
 home_symbol = "~"
 read_only = "  "
 read_only_style = "197"
-truncation_length = 1
+truncation_length = 2
 truncation_symbol = "…/"
-style = "fg:#687387"
+style = "fg:#9aa0ab"
 
 [hostname]
 style = "bold purple"
@@ -46,9 +47,9 @@ style = "bold purple"
 [kubernetes]
 style = "bold blue"
 
-# [git_branch]
-# format = "[on](#687387) [$branch]($style) "
-# style = "#25e8b4"
+[git_branch]
+format = "[on](#9aa0ab) [$branch]($style) "
+style = "#25e8b4"
 #
 # [git_status]
 # ahead = '⇡${count}(#3fcca2) '
