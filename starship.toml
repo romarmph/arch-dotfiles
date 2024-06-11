@@ -28,7 +28,7 @@ symbol = '.'
 
 [username]
 disabled = false
-format = '[$user ]($style)'
+format = '[Heusc]($style) '
 show_always = true
 style_user = 'fg:#9aa0ab'
 
