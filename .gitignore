@@ -1,4 +1,4 @@
-ags/types
+ags/
 ags/node_modules
 assets
 chromium/
@@ -19,8 +19,6 @@ nvim/
 nwg-look/
 pulse/
 rog/
-wallpapers/
-waybar/
 xsettingsd/
 yay/
 dolphinrc
@@ -29,3 +27,5 @@ LICENSE
 mimeapps.list
 pavucontrol.ini
 tmux/plugins
+user-dirs.dirs
+user-dirs.locale

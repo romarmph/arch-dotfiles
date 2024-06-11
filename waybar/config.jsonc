@@ -1,10 +1,6 @@
 {
-    // "layer": "top", // Waybar at top layer
-    // "position": "bottom", // Waybar position (top|bottom|left|right)
-    "height": 30, // Waybar height (to be removed for auto height)
-    // "width": 1280, // Waybar width
-    "spacing": 4, // Gaps between modules (4px)
-    // Choose the order of the modules
+    "height": 30,
+    "spacing": 4,
     "modules-left": [
         "hyprland/workspaces",
         "tray"
@@ -39,7 +35,6 @@
     },
     "battery": {
         "states": {
-            // "good": 95,
             "warning": 30,
             "critical": 15
         },
@@ -47,8 +42,6 @@
         "format-charging": "{capacity}% 󱐋",
         "format-plugged": "{capacity}%",
         "format-alt": "{time} {icon}",
-        // "format-good": "", // An empty format will hide the module
-        // "format-full": "",
         "format-icons": [
             "",
             "",
@@ -66,11 +59,11 @@
         "format-alt": "{ifname}: {ipaddr}/{cidr}"
     },
     "pulseaudio": {
-        "format": " {volume}% {icon} {format_source}",
-        "format-bluetooth": " {volume} {icon} {format_source}  ",
-        "format-bluetooth-muted": "  {icon} {format_source}  ",
-        "format-muted": "  {format_source}",
-        "format-source": " {volume} ",
+        "format": "   {volume}% {icon} {format_source}",
+        "format-bluetooth": "   {volume} {icon} {format_source}",
+        "format-bluetooth-muted": "    {icon} {format_source}",
+        "format-muted": "    {format_source}",
+        "format-source": "   {volume} ",
         "format-source-muted": " ",
         "format-icons": {
             "headphone": "",
